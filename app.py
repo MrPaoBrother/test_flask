@@ -12,5 +12,5 @@ def main():
     return render_template('index.html' , title="Power" , message = "HelloWorld")
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='45.77.150.109')
     
