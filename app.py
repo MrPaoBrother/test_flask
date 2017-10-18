@@ -23,5 +23,5 @@ def answer():
     return render_template('sleep.html' , title="Sorry啊  哈哈哈" , message = "晚安!")
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1')
+    app.run(host='45.77.150.109')
     
