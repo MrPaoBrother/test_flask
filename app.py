@@ -20,5 +20,5 @@ def main():
     return render_template('index.html' , title="Hi" , music = "带你去旅行")
 
 if __name__ == '__main__':
-    app.run(host=config.REMOTE_IP)
+    app.run(host=config.WIFI)
     

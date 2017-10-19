@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +9,7 @@
     <title>{{title}}</title>
 </head>
 <body>
-    <div class="container music">
+    <div class="container music" >
         <div class="block-center">
             <h3 class="text-center text-info">
                 今天送你首歌:{{music}}
@@ -28,7 +27,13 @@
         </div>
             
     </div>
-
+    <style type="text/css">
+        body{
+            background-image: url('../static/images/bg.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
     <script>
         var x = document.getElementById("music");
         var start = document.getElementById("play");
