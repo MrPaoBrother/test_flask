@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../static/css/bootstrap.css" />
     <link rel="stylesheet" href="../static/css/hello.css" />
+    <script type="text/javascript" src="../static/js/jquery.js"></script>
     <title>{{title}}</title>
 </head>
 <body>
@@ -15,14 +16,35 @@
                 今天送你首歌:{{music}}
             </h3>
             <div class="text-center music">
-                <audio controls>
-                    <source src="../static/tour.m4a" type="audio/mpeg">
+                <audio id="music" controls>
+                    <source  src="../static/tour.m4a" type="audio/mpeg">
                     你的浏览器不支持
                 </audio>
+                <br/>
+                <button type="button" id="play" class="btn btn-success">播放</button>
+                <button type="button" id="stop" class="btn btn-default">暂停</button>
+                <button type="button" id="restart" class="btn btn-warning">重新播放</button>
             </div>
         </div>
             
     </div>
+
+    <script>
+        var x = document.getElementById("music");
+        var start = document.getElementById("play");
+        var stop = document.getElementById("stop");
+        var restart = document.getElementById("restart");
+        start.onclick = function(){
+            x.play();
+        };
+        stop.onclick = function(){
+            x.pause();
+        };
+        restart.onclick = function(){
+            x.currentTime = 0;
+            x.play();
+        };
+    </script>
     
     
 </body>

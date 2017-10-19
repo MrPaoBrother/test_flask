@@ -18,15 +18,6 @@ app = Flask(__name__)
 @app.route('/' , methods=['GET' , 'POST'])
 def main():
     return render_template('index.html' , title="Hi" , music = "带你去履行")
-@app.route('/question' , methods=['POST'])
-def answer():
-    answer = request.form["answer"]
-    print "答案是====================>%s"%(answer)
-    return render_template('sleep.html' , title="Sorry啊  哈哈哈" , message = "晚安!")
-
-@app.route('/question' , methods=['GET'])
-def answer_get():
-    return render_template('sleep.html' , title="Sorry啊  哈哈哈" , message = "晚安!")
 
 if __name__ == '__main__':
     app.run(host=config.REMOTE_IP)
