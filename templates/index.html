@@ -9,23 +9,21 @@
     <title>{{title}}</title>
 </head>
 <body>
-    <div class="container">
-            <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h1 class="panel-title text-warning">
-                            {{message}}
-                        </h1>
-                    </div>
-                    <div class="panel-body">
-                            <form role="form" class="center-block" method="post" action="/question">
-                                <div class="form-group">
-                                    <textarea name="answer" rows="5" class="form-control"></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-default">告诉我!</button>
-                            </form>
-                    </div>
-                </div>
+    <div class="container music">
+        <div class="block-center">
+            <h3 class="text-center text-info">
+                今天送你首歌:{{music}}
+            </h3>
+            <div class="text-center music">
+                <audio controls>
+                    <source src="../static/tour.m4a" type="audio/mpeg">
+                    你的浏览器不支持
+                </audio>
+            </div>
+        </div>
+            
     </div>
+    
     
 </body>
 </html>
