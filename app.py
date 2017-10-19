@@ -17,7 +17,7 @@ app = Flask(__name__)
 
 @app.route('/' , methods=['GET' , 'POST'])
 def main():
-    return render_template('index.html' , title="Hi" , music = "带你去履行")
+    return render_template('index.html' , title="Hi" , music = "带你去旅行")
 
 if __name__ == '__main__':
     app.run(host=config.REMOTE_IP)
